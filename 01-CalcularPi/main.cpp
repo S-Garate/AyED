@@ -9,7 +9,7 @@ int main() {
     int denominator = 1;
     int iterations = 0;
 
-    while (fabs(error) >= 0.000001) { // iterar hasta que el error sea menor a 0.000001 (6 decimales)
+    while (fabs(error) >= 0.000001) {
         pi += sign * (4.0 / denominator);
         sign *= -1;
         denominator += 2;
@@ -18,8 +18,7 @@ int main() {
         iterations++;
     }
 
-    //cout.precision(6);  // Establecer precisión en 6 decimales
-    cout << "valor aproximado de pi: " << std::fixed << pi << endl;
+    cout << "valor aproximado de pi: " << fixed << pi << endl;
     cout << "numero de iteraciones: " << iterations << endl;
 
     return 0;
